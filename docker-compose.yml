@@ -1,0 +1,40 @@
+version: '3'
+services:
+  superset:
+    build:
+      context: volumes/superset/.
+    depends_on:
+      - redis
+      - postgres
+    ports:
+      - "8088:8088"
+    volumes:
+       - ./volumes/superset/bin:/etc/superset/bin
+       - ./volumes/superset/conf:/etc/superset/conf
+       - ./volumes/superset/data:/etc/superset/data
+       - ./volumes/superset/dashboards:/etc/superset/dashboards
+    working_dir: /etc/superset/conf
+    environment:
+      SUPERSET_HOME: /etc/superset/conf
+      MAPBOX_API_KEY: ${MAPBOX_API_KEY}
+      SUPERSET_SECRET_KEY: ${SUPERSET_SECRET_KEY}
+      SUPERSET_ADMIN_USERNAME: ${SUPERSET_ADMIN_USERNAME}
+      SUPERSET_ADMIN_PASSWD: ${SUPERSET_ADMIN_PASSWD}
+      POSTGRES_HOST: ${POSTGRES_HOST}
+      POSTGRES_PORT: ${POSTGRES_PORT}
+      POSTGRES_ADMIN_USER: ${POSTGRES_ADMIN_USER}
+      POSTGRES_ADMIN_PASSWORD: ${POSTGRES_ADMIN_PASSWORD}
+
+  redis:
+    image: redis:4.0.2
+    volumes:
+      - ./volumes/redis/data:/data
+
+  postgres:
+    image: postgres:10.0
+    expose: ["5432"]
+    ports:
+      - "5432:5432"
+    volumes:
+        - ./volumes/postgres/data:/var/lib/postgresql/data
+    command: "postgres -c 'shared_buffers=4GB' -c 'work_mem=10MB'"

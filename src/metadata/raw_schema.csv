@@ -1,0 +1,45 @@
+declaration_avantage,declaration_convention,declaration_remuneration,name,to_keep,type,alignement
+entreprise_identifiant,entreprise_identifiant,entreprise_identifiant,entreprise_identifiant,1,TEXT,idem
+denomination_sociale,denomination_sociale,denomination_sociale,denomination_sociale,1,TEXT,idem
+ligne_identifiant,ligne_identifiant,ligne_identifiant,ligne_identifiant,0,TEXT,idem
+ligne_rectification,ligne_rectification,ligne_rectification,ligne_rectification,0,TEXT,idem
+benef_categorie_code,benef_categorie_code,benef_categorie_code,benef_categorie_code,1,TEXT,idem
+categorie,categorie,categorie,categorie,1,TEXT,idem
+benef_nom,benef_nom,benef_nom,benef_nom,1,TEXT,idem
+benef_prenom,benef_prenom,benef_prenom,benef_prenom,1,TEXT,idem
+benef_qualite_code,benef_qualite_code,benef_qualite_code,benef_qualite_code,1,TEXT,idem
+qualite,qualite,qualite,qualite,1,TEXT,idem
+benef_adresse1,benef_adresse1,benef_adresse1,benef_adresse1,0,TEXT,idem
+benef_adresse2,benef_adresse2,benef_adresse2,benef_adresse2,0,TEXT,idem
+benef_adresse3,benef_adresse3,benef_adresse3,benef_adresse3,0,TEXT,idem
+benef_adresse4,benef_adresse4,benef_adresse4,benef_adresse4,0,TEXT,idem
+benef_codepostal,benef_codepostal,benef_codepostal,benef_codepostal,0,TEXT,idem
+benef_ville,benef_ville,benef_ville,benef_ville,0,TEXT,idem
+benef_pays_code,benef_pays_code,benef_pays_code,benef_pays_code,0,TEXT,idem
+pays,pays,pays,pays,0,TEXT,idem
+benef_titre_code,benef_titre_code,benef_titre_code,benef_titre_code,0,TEXT,idem
+benef_titre_libelle,benef_titre_libelle,benef_titre_libelle,benef_titre_libelle,0,TEXT,idem
+benef_specialite_code,benef_specialite_code,benef_specialite_code,benef_specialite_code,0,TEXT,idem
+benef_speicalite_libelle,benef_speicalite_libelle,benef_speicalite_libelle,benef_speicalite_libelle,0,TEXT,idem
+benef_identifiant_type_code,benef_identifiant_type_code,benef_identifiant_type_code,benef_identifiant_type_code,0,TEXT,idem
+identifiant_type,identifiant_type,identifiant_type,identifiant_type,1,TEXT,idem
+benef_identifiant_valeur,benef_identifiant_valeur,benef_identifiant_valeur,benef_identifiant_valeur,1,TEXT,idem
+benef_etablissement,benef_etablissement,benef_etablissement,benef_etablissement,1,TEXT,idem
+benef_etablissement_codepostal,benef_etablissement_codepostal,benef_etablissement_codepostal,benef_etablissement_codepostal,0,TEXT,idem
+benef_etablissement_ville,benef_etablissement_ville,benef_etablissement_ville,benef_etablissement_ville,0,TEXT,idem
+benef_denomination_sociale,benef_denomination_sociale,benef_denomination_sociale,benef_denomination_sociale,1,TEXT,idem
+benef_objet_social,benef_objet_social,benef_objet_social,benef_objet_social,1,TEXT,idem
+ligne_type,ligne_type,ligne_type,ligne_type,1,TEXT,idem
+avant_date_signature,conv_date_signature,remu_date,main_date,1,DATE,sens identique ?
+,conv_objet,,conv_objet,0,TEXT,unique
+,conv_objet_autre,,conv_objet_autre,0,TEXT,unique
+,conv_date_debut,,conv_date_debut,0,DATE,unique
+,conv_date_fin,,conv_date_fin,0,DATE,unique
+avant_montant_ttc,conv_montant_ttc,remu_montant_ttc,montant_ttc,1,NUMERIC,meme sens
+,conv_manifestation_date,,conv_manifestation_date,0,DATE,idem
+,conv_manifestation_nom,,conv_manifestation_nom,0,TEXT,idem
+,conv_manifestation_lieu,,conv_manifestation_lieu,0,TEXT,idem
+,conv_manifestation_organisateur,,conv_manifestation_organisateur,0,TEXT,idem
+avant_convention_lie,,remu_convention_liee,convention_liee,0,TEXT,meme sens
+avant_nature,,,avant_nature,1,TEXT,unique
+semestre,,,semestre,0,TEXT,unique
